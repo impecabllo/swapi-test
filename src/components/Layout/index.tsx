@@ -1,13 +1,20 @@
+import { Box, Container } from "@mui/material"
 import { Outlet } from "react-router"
+
+import Header from "../Header"
 
 import type { FC } from "react"
 
 const Layout: FC = () => {
   return (
     <main>
-      <header>Header</header>
+      <Header />
 
-      <Outlet />
+      <Container>
+        <Box my={6}>
+          <Outlet />
+        </Box>
+      </Container>
     </main>
   )
 }
